@@ -1,0 +1,5 @@
+data\Product.class
+application\BookView.class
+application\ProductView.class
+application\App.class
+data\Book.class
