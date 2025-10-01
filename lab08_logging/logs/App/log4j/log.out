@@ -1,0 +1,12 @@
+2025-10-01 16:48:34,588 INFO [main] edu.psu.se411.lab08_logging.App - Application starts
+2025-10-01 16:48:34,589 WARN [main] edu.psu.se411.lab08_logging.App - InsufficientFundsException object created: Insufficient funds. Your balance is 1000.0
+2025-10-01 16:48:34,589 ERROR [main] edu.psu.se411.lab08_logging.App - Exception thrown during withdrawal
+edu.psu.se411.lab08_logging.exceptions.InsufficientFundsException: Insufficient funds. Your balance is 1000.0
+	at edu.psu.se411.lab08_logging.model.WalletAccount.withdraw(WalletAccount.java:15)
+	at edu.psu.se411.lab08_logging.App.main(App.java:21)
+2025-10-01 16:48:34,592 WARN [main] edu.psu.se411.lab08_logging.App - IllegalArgumentException object created: Cannot deposit negative number: -100.0
+2025-10-01 16:48:34,592 ERROR [main] edu.psu.se411.lab08_logging.App - Exception thrown during deposit
+java.lang.IllegalArgumentException: Cannot deposit negative number: -100.0
+	at edu.psu.se411.lab08_logging.model.WalletAccount.deposit(WalletAccount.java:24)
+	at edu.psu.se411.lab08_logging.App.main(App.java:30)
+2025-10-01 16:48:34,592 INFO [main] edu.psu.se411.lab08_logging.App - Application ends
