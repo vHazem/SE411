@@ -1,0 +1,8 @@
+Oct 07, 2025 4:40:32 PM app.Main main
+INFO: System start
+Oct 07, 2025 4:40:32 PM app.Main main
+WARNING: Exception caught: Hours worked not specified for part-time employee
+Oct 07, 2025 4:40:32 PM app.Main main
+WARNING: Exception caught: Score must be between 0 and 1
+Oct 07, 2025 4:40:32 PM app.Main main
+INFO: System stop
