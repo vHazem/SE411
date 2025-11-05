@@ -41,17 +41,19 @@ public class CourseService {
     }
     
     public Optional<Course> updateCourse(Integer id, Course courseDetails) {
-        return courseRepository.findById(id)
-            .map(existingCourse -> {
-                Course updatedCourse = new Course(
-                    existingCourse.id(),
-                    courseDetails.code(),
-                    courseDetails.name(),
-                    courseDetails.description(),
-                    courseDetails.credits()
-                );
-                return courseRepository.save(updatedCourse);
-            });
+        Optional<Course> existingCourseOptional = courseRepository.findById(id);
+        if (existingCourseOptional.isPresent()) {
+            Course existingCourse = existingCourseOptional.get();
+            Course updatedCourse = new Course(
+                existingCourse.id(),
+                courseDetails.code(),
+                courseDetails.name(),
+                courseDetails.description(),
+                courseDetails.credits()
+            );
+            return Optional.of(courseRepository.save(updatedCourse));
+        }
+        return Optional.empty();
     }
     
     public boolean deleteCourse(Integer id) {
