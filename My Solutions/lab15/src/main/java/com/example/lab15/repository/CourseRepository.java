@@ -8,5 +8,4 @@ import java.util.Optional;
 
 @Repository
 public interface CourseRepository extends CrudRepository<Course, Integer> {
-    Optional<Course> findByCode(String code);
 }
