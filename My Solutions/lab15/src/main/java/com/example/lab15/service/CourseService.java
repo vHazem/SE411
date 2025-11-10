@@ -29,7 +29,6 @@ public class CourseService {
     
     
     public Course createCourse(Course course) {
-        // Always set id to null to ensure INSERT operation
         Course newCourse = new Course(
             null,  // id will be auto-generated
             course.code(),

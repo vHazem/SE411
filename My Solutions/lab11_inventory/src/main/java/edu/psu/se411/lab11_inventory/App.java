@@ -24,9 +24,9 @@ public class App {
 			
 			// Add some books to the inventory
 			System.out.println("Adding items to inventory...\n");
-			inventory.addItem(new Book(1, "Concurrency in Java", "Doug Lea"));
-			inventory.addItem(new Book(2, "Effective Java", "Joshua Bloch"));
-			inventory.addItem(new Book(3, "Clean Code", "Robert Martin"));
+			inventory.addItem(new Book(1, "Java Concurrency in Practice", "Brian Goetz"));
+			inventory.addItem(new Book(2, "Head First Java", "Kathy Sierra"));
+			inventory.addItem(new Book(3, "Design Patterns", "Gang of Four"));
 			
 			// Add some electronic devices to the inventory
 			inventory.addItem(new ElectronicDevice(101, "Laptop", DeviceCategory.LAPTOP));
@@ -34,13 +34,13 @@ public class App {
 			inventory.addItem(new ElectronicDevice(103, "Tablet", DeviceCategory.TABLET));
 			
 			// Display the entire inventory
-			System.out.println("===== Current Inventory =====");
+			System.out.println("Current Inventory");
 			displayInventory(inventory);
 			System.out.println();
 			
 			// Search for a book by name
-			System.out.println("Searching for book: 'Concurrency in Java'");
-			Item foundBook = inventory.findItem(new SearchByName("Concurrency in Java"));
+			System.out.println("Searching for book: 'Java Concurrency in Practice'");
+			Item foundBook = inventory.findItem(new SearchByName("Java Concurrency in Practice"));
 			if (foundBook != null) {
 				System.out.println("Found: " + foundBook);
 			} else {
@@ -78,7 +78,7 @@ public class App {
 			System.out.println();
 			
 			// Display inventory after removal
-			System.out.println("===== Inventory After Removal =====");
+			System.out.println("Inventory After Removal");
 			displayInventory(inventory);
 			
 		} catch (Exception e) {

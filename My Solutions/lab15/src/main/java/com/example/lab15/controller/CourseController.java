@@ -58,10 +58,10 @@ public class CourseController {
 
     // Update a course - PUT /api/v1/courses/{id}
     @PutMapping("/{id}")
-    public ResponseEntity<Course> updateCourse(@PathVariable Integer id, @RequestBody Course courseDetails) {
+    public ResponseEntity<Void> updateCourse(@PathVariable Integer id, @RequestBody Course courseDetails) {
         Optional<Course> updatedCourseOpt = courseService.updateCourse(id, courseDetails);
         if (updatedCourseOpt.isPresent()) {
-            return ResponseEntity.ok(updatedCourseOpt.get()); // 200 OK
+            return ResponseEntity.noContent().build(); // 200 OK
         } else {
             return ResponseEntity.notFound().build(); // 404 Not Found
         }
