@@ -1,0 +1,2 @@
+INSERT INTO course(code, name, description, credits) VALUES ('CS101', 'Programming 1', 'An introduction to programming', 3);
+INSERT INTO course(code, name, description, credits) VALUES ('CS102', 'Programming 2', 'Object oriented programming course', 3);
